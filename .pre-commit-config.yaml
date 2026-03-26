@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        files: ^(backend|ai-server)/.*\.py$
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        files: ^(backend|ai-server)/
+      - id: end-of-file-fixer
+        files: ^(backend|ai-server)/
+      - id: check-yaml
+        files: ^(backend|ai-server)/.*\.(yml|yaml)$
+      - id: check-added-large-files

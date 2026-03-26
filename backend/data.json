@@ -1,0 +1,193 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$iGKLaydECMwnnaB8bpQnMg$7vA3Unmvt3GlMJzINs6+moz/stLk4PsqXdeveleOaIY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testuser",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-07T06:48:40.992Z",
+    "created_at": "2026-03-07T06:48:41.265Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$dlGVFRH6tplWfvPee9zJ1M$DdJhVBP9vlVQf5jSKmapOx6JKT8XPeFlyFUkkZ/5DPU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-07T06:48:56.645Z",
+    "created_at": "2026-03-07T06:48:56.903Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xckW0cY7ytvBv7qBHCUKEg$kGBfgSisOAIx2QBu77w5EtLu6UgMiFWEQM55u4Jb5NI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testuser3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-07T08:05:30.279Z",
+    "created_at": "2026-03-07T08:05:30.559Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xZDk2dTkNW0JDzPdfV03HP$sve2eV2eiWh8r3T/YguyWniIM2u9X+yqvDGhqJoT7KA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testuser2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-07T08:13:45.018Z",
+    "created_at": "2026-03-07T08:13:45.284Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$KQZKbWVRilIXzxTGHwq8tg$D8mhg4v9qbRXSrGkGKouu02lpOWmou2PhTs2M4Qh6BQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "youjung7",
+    "first_name": "",
+    "last_name": "",
+    "email": "handgonpo@naver.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-07T09:47:41.007Z",
+    "created_at": "2026-03-07T09:47:41.263Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "테스트상품1",
+    "description": "상품을 테스트 합니다.",
+    "price": "10000.00",
+    "image": "products/test2_hW4ScGP.png",
+    "created_at": "2026-03-08T01:57:51.175Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "테스트 상품2",
+    "description": "테스트 상품2",
+    "price": "400000.00",
+    "image": "products/test1_H9IymFs.png",
+    "created_at": "2026-03-08T01:58:08.620Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "테스트 상품3",
+    "description": "테스트 상품3",
+    "price": "4000.00",
+    "image": "products/still-life-daisy-flowers_jHMwtz3.jpg",
+    "created_at": "2026-03-08T01:58:27.289Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "테스트 상품4333",
+    "description": "테스트 상품4",
+    "price": "5000.00",
+    "image": "products/수강생_XZPTHKV.png",
+    "created_at": "2026-03-08T01:58:45.040Z"
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 13,
+  "fields": {
+    "user": 6,
+    "product": 14,
+    "content": "이상품 좋아요",
+    "rating": 5,
+    "is_public": true,
+    "created_at": "2026-03-08T02:01:04.002Z",
+    "updated_at": "2026-03-08T02:01:04.002Z"
+  }
+},
+{
+  "model": "interactions.reviewlike",
+  "pk": 9,
+  "fields": {
+    "user": 6,
+    "review": 13,
+    "created_at": "2026-03-08T02:08:06.429Z"
+  }
+},
+{
+  "model": "interactions.reviewbookmark",
+  "pk": 7,
+  "fields": {
+    "user": 6,
+    "review": 13,
+    "created_at": "2026-03-08T02:08:03.344Z"
+  }
+},
+{
+  "model": "interactions.reviewcomment",
+  "pk": 3,
+  "fields": {
+    "user": 6,
+    "review": 13,
+    "content": "좋아요",
+    "created_at": "2026-03-08T02:07:27.296Z",
+    "updated_at": "2026-03-08T02:07:27.296Z"
+  }
+},
+{
+  "model": "interactions.reviewreport",
+  "pk": 1,
+  "fields": {
+    "user": 6,
+    "review": 13,
+    "reason": "111",
+    "created_at": "2026-03-08T02:07:18.439Z"
+  }
+}
+]
