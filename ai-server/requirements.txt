@@ -5,6 +5,4 @@ python-dotenv
 pydantic
 numpy
 scikit-learn
-sentence-transformers
-transformers
 redis
