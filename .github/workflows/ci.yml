@@ -13,7 +13,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16
+        image: ankane/pgvector:latest
         env:
           POSTGRES_DB: product_review_db
           POSTGRES_USER: product_review_user
