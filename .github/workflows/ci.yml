@@ -98,7 +98,13 @@ jobs:
       - name: Install pgvector
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential git clang postgresql-server-dev-16
+          sudo apt-get install -y \
+            build-essential \
+              git \
+              clang-19 \
+              llvm-19 \
+              postgresql-server-dev-16
+
           git clone https://github.com/pgvector/pgvector.git
           cd pgvector
           make
