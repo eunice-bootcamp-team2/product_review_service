@@ -39,3 +39,4 @@ django-environ==0.13.0
 pgvector==0.3.6
 beautifulsoup4
 lxml
+gunicorn

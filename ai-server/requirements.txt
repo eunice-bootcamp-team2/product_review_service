@@ -1,3 +1,17 @@
+# 개발용
+# fastapi
+# uvicorn[standard]
+# requests
+# python-dotenv
+# pydantic
+# numpy
+# scikit-learn
+# sentence-transformers
+# torch
+# transformers
+# redis
+
+# 배포용
 fastapi
 uvicorn[standard]
 requests
