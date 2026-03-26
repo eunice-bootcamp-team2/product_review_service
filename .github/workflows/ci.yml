@@ -90,6 +90,30 @@ jobs:
               raise SystemExit("PostgreSQL did not become ready in time")
           PY
 
+      - name: Install PostgreSQL client tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
+      - name: Install pgvector
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential git postgresql-server-dev-16
+          git clone https://github.com/pgvector/pgvector.git
+          cd pgvector
+          make
+          sudo make install
+
+      - name: Enable pgvector extension
+        env:
+          PGPASSWORD: product_review_password
+        run: |
+          psql \
+            -h 127.0.0.1 \
+            -U product_review_user \
+            -d product_review_db \
+            -c "CREATE EXTENSION IF NOT EXISTS vector;"
+
       - name: Wait for Redis
         run: |
           python - <<'PY'
