@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+crawl.log
+scheduled_crawl.log
 
 # Virtual environments
 backend/.venv/
