@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "apps.crawling",
     # pgvector
     "pgvector.django",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -182,9 +183,6 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
-
 
 FASTAPI_BASE_URL = env("FASTAPI_BASE_URL", default="http://fastapi:8001")
 
@@ -228,3 +226,29 @@ CELERY_TASK_EAGER_PROPAGATES = True
 
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://redis:6379/0")
+
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME")
+
+AWS_DEFAULT_ACL = None
+
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = BASE_DIR / "media"
+
+AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME", "ap-northeast-2")
+AWS_STORAGE_BUCKET_NAME_STATIC = os.getenv("AWS_STORAGE_BUCKET_NAME_STATIC")
+AWS_STORAGE_BUCKET_NAME_MEDIA = os.getenv("AWS_STORAGE_BUCKET_NAME_MEDIA")
+
+STATIC_URL = f"https://{AWS_STORAGE_BUCKET_NAME_STATIC}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/static/"
+MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME_MEDIA}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/media/"
+
+STORAGES = {
+    "default": {
+        "BACKEND": "mysite.storage.MediaStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "mysite.storage.StaticStorage",
+    },
+}

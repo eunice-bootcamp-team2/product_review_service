@@ -40,3 +40,5 @@ pgvector==0.3.6
 beautifulsoup4
 lxml
 gunicorn
+boto3
+django-storages
